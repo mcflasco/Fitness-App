@@ -1,62 +1,51 @@
 package com.mcflapps.FitnessApp;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Build {
-	private String workout;
-	private String title;
-	private String setType;
+//	private String workout;
+//	private String title;
+//	
+	@Id // specifies your getting a primary key
+	private int id;
 	private int setOne;
 	private int setTwo;
 	private int setThree;
 	private int setFour;
-	
 
 	public Build() {
-		
+
 	}
-	
-	public Build(String workout, String title, int setOne, int setTwo, int setThree) {
-		this.workout = workout;
-		this.title = title;
+
+	public Build(int id, int setOne, int setTwo, int setThree) {
+//		this.workout = workout;
+//		this.title = title;
+		this.id = id;
 		this.setOne = setOne;
 		this.setTwo = setTwo;
 		this.setThree = setThree;
-		
+
 	}
-	
-	public Build(String workout, String title, int setOne, int setTwo, int setThree, int setFour) {
-		this.workout = workout;
-		this.title = title;
+
+	public Build(int id, int setOne, int setTwo, int setThree, int setFour) {
+//		this.workout = workout;
+//		this.title = title;
+		this.id = id++;
 		this.setOne = setOne;
 		this.setTwo = setTwo;
 		this.setThree = setThree;
 		this.setFour = setFour;
-		
-	}
-	
-	
 
-	public String getWorkout() {
-		return workout;
 	}
 
-	public void setWorkout(String workout) {
-		this.workout = workout;
+	public int getId() {
+		return id;
 	}
 
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	
-	public String getSetType() {
-		return setType;
-	}
-
-	public void setSetType(String setType) {
-		this.setType = setType;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public int getSetOne() {
@@ -90,9 +79,9 @@ public class Build {
 	public void setSetFour(int setFour) {
 		this.setFour = setFour;
 	}
-	
+
 	public String toString() {
-		return workout + ": Exercise: " + title  + ", " + setOne + " Reps, " + setTwo + " Reps, " + setThree + " Reps, " + setFour + " Reps ";
+		return setOne + " Reps, " + setTwo + " Reps, " + setThree + " Reps, " + setFour + " Reps ";
 	}
 
 }

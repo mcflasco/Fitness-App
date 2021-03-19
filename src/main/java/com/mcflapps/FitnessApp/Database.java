@@ -7,6 +7,14 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class Database {
+//	Configuration con = new Configuration().configure().addAnnotatedClass(Employee.class).addAnnotatedClass(Alien.class); 	
+//	
+//	ServiceRegistry reg = new ServiceRegistryBuilder().applySettings(con.getProperties()).buildServiceRegistry();
+//	SessionFactory sf = con.buildSessionFactory(reg);
+//	
+//	Session session = sf.openSession();
+//	
+//	Transaction tx = session.beginTransaction();
 	
 	static Connection conn = null;
 	Statement stmt = null;
